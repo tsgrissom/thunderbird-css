@@ -1,0 +1,32 @@
+@import "variables.css";
+
+/*
+ MESSAGE PANE
+ */
+
+/* While Selected */
+tr.selected {
+  background-color: var(--t-accent-dark-2) !important;
+	color: white !important;
+}
+
+/* On Hover */
+tr:hover {
+  background-color: var(--t-accent-dark) !important;
+	color: white !important;
+}
+
+/*
+ MESSAGE WARNINGS
+ */
+
+/*
+ Removes horrible yellow warning that appears
+ for nearly every message, notably junk and
+ those with remote content.
+ */
+:host(notification-message[type="warning"]).text-content, div.container, div.content {
+  --message-bar-background-color: #27272a;
+  --message-bar-text-color: #c6c6ca;
+  border-radius: 0px !important;
+}

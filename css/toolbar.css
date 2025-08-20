@@ -1,0 +1,24 @@
+/*
+ UNIFIED TOOLBAR
+ */
+
+/*
+ Removes the unified toolbar? TODO Not sure what this is
+ https://www.elevenforum.com/t/thunderbird-115-css-customization.16320/post-341092
+ */
+#unifiedToolbar {
+	display: none !important;
+}
+
+/*
+ TITLE BAR
+ */
+
+/* 
+ Pushes the window min, max, and close buttons to the
+ right side of the title bar.
+ */
+#unifiedToolbarContainer .titlebar-buttonbox-container {
+  order: 1000 !important;
+  margin-left: auto !important;
+}

@@ -1,0 +1,18 @@
+/*
+ VARIABLES
+ */
+
+:root {
+  /* My purple: #7170bc */
+
+  /* Too light for some text, good for UI accents */
+  --t-accent-light: #7170bc;
+  /* 7% lighter than accent-dark */
+  --t-accent: #565591;
+  /* Good shade to be readable on white */
+  --t-accent-dark: #49487a;
+  /* 5% darker than accent-dark */
+  --t-accent-dark-2: #3f3e6a;
+  /* 5% darker than accent-dark-2 */
+  --t-accent-dark-3: #35355a;
+}

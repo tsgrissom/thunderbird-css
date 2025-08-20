@@ -1,0 +1,62 @@
+@import "variables.css";
+
+/*
+ TAB BAR
+ */
+
+/* https://www.reddit.com/r/FirefoxCSS/comments/x7fozh/change_tab_line_color_in_thunderbird/inevrob/ */
+
+/*
+ Adds subtle thin line between the tab bar and the messenger
+ body, which makes the selected tab's outline appear flush
+ with the rest of the tab bar.
+ */
+#messengerBody {
+  /* outline: 1px solid lightgray; */
+  outline: 1px solid var(--t-accent-light);
+}
+
+/*
+ Adds a thin vertical line separating most of the window from
+ the spaces sidebar, which contains tabs for messages, contacts,
+ calendar, etc.
+ */
+/* #spacesToolbar { */
+  /* Originally identical with variable pointing to --spaces-bg-color */
+  /* border-right: 1px solid var(--tsg-light-purple, --spaces-bg-color) !important; */
+  /* position: relative; */
+/* } */
+
+/*
+ Adds subtle thin border to horizontal edges of selected tabs.
+ Falls back to current color if needed, which appears to be
+ the same white used by the rest of the tab bar's line.
+ */
+.tab-background[selected] {
+  border-inline: 1px solid var(--t-accent-light, currentColor) !important;
+}
+
+/*
+ Adds thick top border to selected tabs. The thickness of
+ the line conceals the smaller Thunderbird blue line
+ underneath it, so turning down will reveal it.
+ */
+.tab-content[selected] {
+  border-top: 1px solid var(--t-accent-light) !important;
+}
+
+/* 
+ Replaces blue overline inside of the active tab
+ */
+.tab-line {
+  /* ORIGINAL
+  height: 2px;
+  margin-top: 3px;
+  margin-inline: 3px;
+  border-radius: 3px;
+  */
+  
+  &[selected="true"] {
+    background-color: var(--t-accent-light) !important;
+  }
+}

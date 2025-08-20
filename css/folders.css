@@ -1,0 +1,50 @@
+@import "variables.css";
+
+/*
+ "NEW MESSAGE" BUTTON
+ https://www.reddit.com/r/Thunderbird/comments/15xxjwh/userchromecss_only_selectively_applying_in_tb_115/
+ */
+
+/*
+ Border was none originally, but there was an ugly
+ blue border which wasn't controlled by this
+ selector. I overlayed a thin border of the same
+ color.
+ */
+#folderPaneWriteMessage {
+  background-color: var(--t-accent-dark) !important;
+  border: none !important;
+}
+
+/*
+ I added this hover selector which mirrors the
+ above selector.
+ */
+#folderPaneWriteMessage:hover {
+  background-color: var(--t-accent) !important;
+  border: none !important;
+}
+
+/* 
+ Removes
+ */
+#folderTree li [data-server-type] > .container > .name {
+  /* font-weight: normal !important; */
+  font-weight: 400 !important;
+}
+
+/*
+ FOLDER LIST
+ */
+
+/* While Selected - Make sure icons are visible */
+#folderTree li.selected  > .container {
+	background-color: var(--t-accent-dark-2) !important;
+	color: white !important;
+}
+
+/* On Hover */
+#folderTree li > .container:hover {
+	background-color: var(--t-accent-dark) !important;
+	color: white !important;
+}
